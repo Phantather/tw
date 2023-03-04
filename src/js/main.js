@@ -9,6 +9,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
+//select
+const languageSelect = document.getElementById('language-select');
+
+languageSelect.addEventListener('change', function() {
+    const selectedLanguage = this.value;
+});
+
 
 // Burger
 const burger = document.querySelector('.header__burger')
@@ -24,7 +31,14 @@ burger.addEventListener('click', () => {
 
 
 //swiper
-
+var swiper = new Swiper(".glSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
 var swiper = new Swiper(".mySwiper",{
     slidesPerView:4,
@@ -72,3 +86,4 @@ var swiper = new Swiper(".mySwiper",{
         }
     }
 });
+

@@ -31,6 +31,14 @@ app.get('/history', (req, res) => {
 app.get('/mission', (req, res) => {
     res.render('pages/mission/index'); // Переход на страницу "Контакты"
 });
+
+app.get('/news', (req, res) => {
+    res.render('pages/news/index'); // Переход на страницу "Контакты"
+});
+
+app.get('/gallery', (req, res) => {
+    res.render('pages/gallery/index'); // Переход на страницу "Контакты"
+});
 //
 // // Запуск сервера
 app.listen(PORT, () => {

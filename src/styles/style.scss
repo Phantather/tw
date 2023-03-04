@@ -151,11 +151,31 @@ button {
 }
 
 .header {
+  .language-selector {
+
+  }
+
+  .language-selector label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .language-selector select {
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #E81896;
+    padding: 5px;
+    outline: none;
+  }
   &.scrolled {
     background: #fff;
     border-radius: 0 0 20px 20px;
     border-bottom: 2px solid #E81896;
+    padding: 10px 0;
+    transition: .5s all;
   }
+  transition: .5s all;
   padding: 30px 0;
   position: sticky;
   top: 0;
@@ -1058,3 +1078,5 @@ border: none;
 
 
 @import "media";
+@import "new";
+@import "gallery";
