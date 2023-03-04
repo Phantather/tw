@@ -1,0 +1,56 @@
+<%- include('../../partials/head') %>
+
+<body>
+
+
+<header class="header">
+    <%- include('../../partials/header') %>
+</header>
+
+
+<main>
+    <section class="contact">
+        <h2 class="founder-title">Контакты</h2>
+        <div class="container">
+            <div class="contact__row">
+                <ul class="contact__info">
+                    <li>
+                        <a href="" class="contact__info-link">
+                            <img src="/images/footer/whatsapp.svg" alt="">
+                            +996(555)55-55-55
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="" class="contact__info-link">
+                            <img src="/images/footer/telegram.svg" alt="">
+                            +996(555)55-55-55
+                        </a>
+                    </li>
+                </ul>
+                <form class="contact__form">
+                    <label class="contact__form-fluid">
+                        <input type="text" placeholder="ФИО">
+                    </label>
+                    <label class="contact__form-fluid">
+                        <input type="email" placeholder="Email">
+                    </label>
+                    <label class="contact__form-fluid">
+                        <input type="number" placeholder="Тел:">
+                    </label>
+                    <button class="contact__form-btn" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<%- include('../../partials/footer') %>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

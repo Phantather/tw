@@ -5,6 +5,8 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-style: normal;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -1080,3 +1082,4 @@ border: none;
 @import "media";
 @import "new";
 @import "gallery";
+@import "contact";
