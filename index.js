@@ -43,6 +43,18 @@ app.get('/gallery', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('pages/contact/index.ejs'); // Переход на страницу "Контакты"
 });
+
+app.get('/support', (req, res) => {
+    res.render('pages/support/index.ejs'); // Переход на страницу "Контакты"
+});
+
+app.get('/projects', (req, res) => {
+    res.render('pages/projects/index.ejs'); // Переход на страницу "Контакты"
+});
+
+app.get('/colobarators', (req, res) => {
+    res.render('pages/colobarators/index.ejs'); // Переход на страницу "Контакты"
+});
 //
 // // Запуск сервера
 app.listen(PORT, () => {

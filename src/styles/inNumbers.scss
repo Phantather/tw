@@ -1,0 +1,63 @@
+.inNumbers {
+
+  padding: 130px 53px 170px 536px;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  &__leftSvg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+
+  }
+
+  &__leftImg {
+    position: absolute;
+    left: -30px;
+    bottom: 50px;
+    z-index: 3;
+  }
+
+  &__rightSvg {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+  }
+
+  &__circle {
+
+    width: 557px;
+    height: 512px;
+    border: 1px solid #E9ED1C80;
+    border-radius: 50%;
+    position: absolute;
+    top: 133px;
+    left: 381px;
+    z-index: -1;
+    &-right{
+      top: 133px;
+      left: 581px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    color: #0F2935;
+    margin-bottom: 165px;
+
+  }
+
+  &__list {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0F2935;
+  }
+
+
+}

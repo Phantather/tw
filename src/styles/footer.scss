@@ -1,0 +1,20 @@
+.footer {
+  background: #0F2935;
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+  &__social {
+    display: flex;
+    column-gap: 40px;
+    list-style-type: none;
+  }
+}

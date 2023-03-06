@@ -1,0 +1,39 @@
+.openTech {
+  background: url("../images/openTech/img.jpg") no-repeat center fixed;
+  background-size: 100%;
+
+  height: 570px;
+
+  &__overlay {
+    background: linear-gradient(180deg, rgba(170, 34, 183, 0.7) 0%, rgba(121, 41, 210, 0.7) 0.01%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: white;
+  }
+
+  &__btn {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 434px;
+    height: 88px;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,30 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 50px 0 70px 50px;
+  &__line{
+    border-bottom: 1px solid black;
+    width: 60%;
+  }
+  &__block{
+    display: flex;
+
+
+    padding-bottom: 30px;
+
+    &-text{
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+      width: 60%;
+
+
+    }
+    &-img{
+      width: 40%;
+      border-radius: 10px;
+    }
+
+  }
+}
