@@ -1,5 +1,17 @@
 const express = require('express');
 const app = express();
+const homeRoute = require('./routes/home')
+const archiveRoute = require('./routes/archive')
+const colabRoute = require('./routes/colobarators')
+const eventsRoute = require('./routes/events')
+const founderRoute = require('./routes/founder')
+const historyRoute = require('./routes/history')
+const galleryRoute = require('./routes/gallery')
+const contactRoute = require('./routes/contact')
+const missionRoute = require('./routes/mission')
+const newsRoute = require('./routes/news')
+const projectsRoute = require('./routes/projects')
+const supportRoute = require('./routes/support')
 
 const PORT = process.env.PORT || 4000
 
@@ -9,53 +21,22 @@ app.use(express.static(__dirname + '/src'));
 
 
 
+
 // Маршруты
-app.get('/', (req, res) => {
-    res.render('pages/home/index.ejs'); // Переход на главную страницу
-});
-//
-app.get('/archive', (req, res) => {
-    res.render('pages/archive/index.ejs'); // Переход на страницу "О нас"
-});
+app.use(homeRoute)
+app.use(archiveRoute)
+app.use(colabRoute)
+app.use(eventsRoute)
+app.use(founderRoute)
+app.use(historyRoute)
+app.use(galleryRoute)
+app.use(contactRoute)
+app.use(missionRoute)
+app.use(newsRoute)
+app.use(projectsRoute)
+app.use(supportRoute)
 
-app.get('/events', (req, res) => {
-    res.render('pages/events/index.ejs'); // Переход на страницу "Контакты"
-});
 
-app.get('/founders', (req, res) => {
-    res.render('pages/founders/index.ejs'); // Переход на страницу "Контакты"
-});
-app.get('/history', (req, res) => {
-    res.render('pages/history/index.ejs'); // Переход на страницу "Контакты"
-});
-app.get('/mission', (req, res) => {
-    res.render('pages/mission/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/news', (req, res) => {
-    res.render('pages/news/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/gallery', (req, res) => {
-    res.render('pages/gallery/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/contact', (req, res) => {
-    res.render('pages/contact/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/support', (req, res) => {
-    res.render('pages/support/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/projects', (req, res) => {
-    res.render('pages/projects/index.ejs'); // Переход на страницу "Контакты"
-});
-
-app.get('/colobarators', (req, res) => {
-    res.render('pages/colobarators/index.ejs'); // Переход на страницу "Контакты"
-});
-//
 // // Запуск сервера
 app.listen(PORT, () => {
     console.log('Сервер запущен на порту 3000');
