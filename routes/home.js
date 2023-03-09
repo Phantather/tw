@@ -1,12 +1,12 @@
 const {Router} = require('express')
-const axios = require('axios')
+const API = require('../configs/axios')
 const router = Router()
 
 
 router.get('/', async (req, res) => {
     let response = null
     try {
-        await axios.get('https://fakestoreapi.com/users')
+         await API.get('/users')
             .then(({data}) => response = data)
 
     } catch (err) {
