@@ -24,24 +24,25 @@ button {
   padding: 0 20px;
   margin: 0 auto;
 }
-.nav{
-  padding:30px ;
+.nav {
+  padding: 30px;
 }
 
-@import "media";
-@import "main";
-@import "new";
-@import "gallery";
-@import "contact";
-@import "suppport";
-@import "info";
-@import "content";
-@import "calendar";
-@import "flexContainer";
-@import "founder";
-@import "inNumbers";
-@import "header";
-@import "news";
-@import "onpenTech";
-@import "partners";
-@import "footer";
+@import '_baseMD';
+@import '_media';
+@import '_main';
+@import '_new';
+@import '_gallery';
+@import '_contact';
+@import '_suppport';
+@import '_info';
+@import '_content';
+@import '_calendar';
+@import '_flexContainer';
+@import '_founder';
+@import '_inNumbers';
+@import '_header';
+@import '_news';
+@import '_onpenTech';
+@import '_partners';
+@import '_footer';
