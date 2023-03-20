@@ -6,7 +6,7 @@ const axios = require('axios')
 
 // Set config defaults when creating the instance
 const API = axios.create({
-    baseURL: 'https://fakestoreapi.com'
+    baseURL: 'http://192.168.88.88:1337/api'
 });
 
 // Alter defaults after instance has been created

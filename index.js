@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+
+//Require Routes
 const homeRoute = require('./routes/home')
 const archiveRoute = require('./routes/archive')
 const colabRoute = require('./routes/colobarators')
@@ -13,13 +15,13 @@ const newsRoute = require('./routes/news')
 const projectsRoute = require('./routes/projects')
 const supportRoute = require('./routes/support')
 
+//Base port
 const PORT = process.env.PORT || 4000
 
 app.set('view engine', 'ejs')
 
+//read files
 app.use(express.static(__dirname + '/src'));
-
-
 
 
 // Маршруты
@@ -37,7 +39,7 @@ app.use(projectsRoute)
 app.use(supportRoute)
 
 
-// // Запуск сервера
+//Запуск сервера
 app.listen(PORT, () => {
-    console.log('Сервер запущен на порту 3000');
+    console.log('Сервер запущен на порту 4000');
 })
