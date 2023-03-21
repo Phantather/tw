@@ -9,6 +9,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+
 //select
 const languageSelect = document.getElementById('language-select');
 
@@ -86,4 +88,25 @@ var swiper = new Swiper(".mySwiper",{
         }
     }
 });
+
+
+let overlay = document.querySelector('.overlay')
+let btn = document.querySelectorAll('.main__buttons-btn ')
+let close = document.querySelector('.popup__close')
+
+Array.from(btn).forEach((item) => {
+    item.addEventListener('click', () => {
+        overlay.style.display = 'flex'
+    })
+})
+
+close.addEventListener('click', () => {
+    overlay.style.display = 'none'
+})
+
+overlay.addEventListener('click', (e) => {
+    if (e.target.className === 'overlay') {
+        overlay.style.display = 'none'
+    }
+})
 

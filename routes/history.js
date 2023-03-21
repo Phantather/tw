@@ -14,9 +14,9 @@ router.get('/history',async (req, res) => {
         console.log(err)
     }
 
-    res.render('pages/history/index.ejs', {
+    res.render('./pages/history/index.ejs', {
         data: response
-    }); // Переход на страницу "Контакты"
+    });
 });
 
 

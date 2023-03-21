@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  list-style-type: none;
   text-decoration: none;
 }
 
@@ -26,6 +25,34 @@ button {
 }
 .nav {
   padding: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #0F2935;
+  .popup {
+    width: 380px;
+    position: relative;
+    &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 25px;
+      color: #E81896;
+    }
+  }
+  .contact__form {
+    width: 100%;
+  }
 }
 
 @import '_baseMD';
