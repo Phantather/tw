@@ -1,54 +1,41 @@
 <%- include('../../partials/head') %>
 
 <body>
+  <header class="header"><%- include('../../partials/header') %></header>
 
-
-<header class="header">
-    <%- include('../../partials/header') %>
-</header>
-
-<main class="main">
+  <main class="main">
     <section class="new">
-        <div class="container">
-            <h2 class="new__title">
-                Новости
-            </h2>
-            <div class="new__row">
+      <div class="container">
+        <h2 class="new__title">Новости</h2>
+        <div class="new__row">
+          <div class="new__card-main">
+            <img
+              src="<%= data.domain %><%= data.topNewsOne.PreviewImage.url %>"
+              alt="Preview Image"
+            />
+          </div>
+          <div class="new__card-main">
+            <h2 class="new__card-main-title"><%- data.topNewsOne.Title %></h2>
+            <p class="new__card-main-desc"><%- data.topNewsOne.Description%></p>
+          </div>
 
-                    <div class="new__card-main">
-                        <img src="<%= data.data[0].PreviewImage.url %>" alt="Preview Image"/>
-                    </div>
-                    <div class="new__card-main">
-                        <h2 class="new__card-main-title">
-                            <%- data.data[0].Title %>
-                        </h2>
-                        <p class="new__card-main-desc">
-                           <%- data.data[0].Contents%>
-                        </p>
-                    </div>
-
-
-                <% data.data.forEach(item => { %>
-                    <div class="new__card">
-                        <img src="/images/news/news1.jpeg" alt="" class="new__card-img">
-                        <div>
-                            <p class="new__card-desc">
-                                <%- item.Contents%>
-                            </p>
-                            <p class="new__card-date">
-                                3 янв
-                            </p>
-                        </div>
-
-                    </div>
-                <%})%>
-
+          <% data.rowedNews.forEach(item => { %>
+          <div class="new__card">
+            <img
+              src="<%= data.domain %><%= item.PreviewImage.url %>"
+              alt=""
+              class="new__card-img"
+            />
+            <div>
+              <p class="new__card-desc"><%- item.Description%></p>
+              <p class="new__card-date"><%- item.Date %></p>
             </div>
+          </div>
+          <%})%>
         </div>
+      </div>
     </section>
-</main>
+  </main>
 
-
-<%- include('../../partials/footer') %>
-
-<%- include('../../partials/foot') %>
+  <%- include('../../partials/footer') %> <%- include('../../partials/foot') %>
+</body>
