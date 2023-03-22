@@ -48,7 +48,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0F2935;
 }
 .overlay .popup {
   width: 380px;
@@ -64,6 +63,9 @@ button {
 }
 .overlay .contact__form {
   width: 100%;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+          box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  background: rgba(192, 196, 198, 0.9);
 }
 
 .md {
@@ -965,7 +967,7 @@ button {
 }
 .new__card {
   border-radius: 20px;
-  padding: 5px;
+  padding: 5px 5px 30px;
   border: 2px solid #E81896;
   width: calc(33.33333% - 13.33333px);
   max-height: 600px;
@@ -1495,7 +1497,6 @@ button {
 .founder {
   position: relative;
   padding-bottom: 120px;
-  z-index: -1;
 }
 .founder::after {
   content: "";
@@ -1528,8 +1529,8 @@ button {
   z-index: 4;
 }
 .founder-card {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(70.32%, #5C2BDF), to(rgba(241, 23, 146, 0.7)));
-  background: linear-gradient(180deg, #5C2BDF 70.32%, rgba(241, 23, 146, 0.7) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70.32%, #5c2bdf), to(rgba(241, 23, 146, 0.7)));
+  background: linear-gradient(180deg, #5c2bdf 70.32%, rgba(241, 23, 146, 0.7) 100%);
   border-radius: 10px;
   width: 100%;
   padding-bottom: 45px;
@@ -1553,7 +1554,8 @@ button {
   color: white;
   text-align: center;
 }
-.founder .swiper-button-prev::after, .founder .swiper-button-next::after {
+.founder .swiper-button-prev::after,
+.founder .swiper-button-next::after {
   color: #fff !important;
 }
 

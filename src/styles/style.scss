@@ -37,7 +37,6 @@ button {
   display: none;
   justify-content: center;
   align-items: center;
-  background: #0F2935;
   .popup {
     width: 380px;
     position: relative;
@@ -52,6 +51,8 @@ button {
   }
   .contact__form {
     width: 100%;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    background: rgba(192, 196, 198, 0.90);
   }
 }
 
