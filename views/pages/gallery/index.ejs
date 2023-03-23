@@ -14,102 +14,14 @@
                 Галлерея
             </h2>
             <div class="gallery__row">
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
-                <div class="gallery__card">
-                    <img src="/images/news/news2.jpeg" alt="">
-                    <p class="gallery__card-info">
-                        Члены technowomenkg , 28 февраля в рамках региональной подготовки к 67-й сессии Комиссии ООН по положению женщин
-                    </p>
-                </div>
+                <% data.data.GalleryList.forEach(item => {%>
+                    <div class="gallery__card">
+                        <img src="<%= domain %><%= item.Image[0].url %>" alt="">
+                        <p class="gallery__card-info">
+                            <%- item.Title %>
+                        </p>
+                    </div>
+                <%})%>
             </div>
         </div>
     </section>

@@ -8,12 +8,11 @@
 </header>
 
 
-
-
 <main>
-    <section class="main__intro" >
+    <section class="main__intro">
         <div class="container">
             <h1 class="main__title">TECHNO WOMEN KYRGYZSTAN</h1>
+            <p class="main__text">Созидай. Удивляй. Верь в себя</p>
             <div class="main__box">
 
                 <img class="main__logo" src="/images/girls.png" alt="girls_logo">
@@ -30,20 +29,20 @@
 
     </section>
 
-    <section class="main__about" >
+    <section class="main__about">
         <div class="container">
             <div class="main__about-box1">
                 <div class="main__about-box1-text">
                     <p>
-                        <strong>Techno Women</strong> <br /><br />
+                        <strong>Techno Women</strong> <br/><br/>
                         Некоммерческая организация "Techno Women" объединила женщин, работающих в технологических
                         отраслях:
                         IT, digital, telecom, new media, Fintech, Edutech, Healthtech, Biotech, Ecotech, Nanotech,
                         Robotics,
-                        space и других высокотехнологичных отраслях.<br /><br />
+                        space и других высокотехнологичных отраслях.<br/><br/>
 
                         МИССИЯ Techno Women – ОТКРЫТЬ НОВЫЕ ВОЗМОЖНОСТИ ДЛЯ ВСЕХ ДЕВУШЕК И ЖЕНЩИН ВО ВСЕМ ЦИФРОВОМ
-                        МИРЕ<br /><br />
+                        МИРЕ<br/><br/>
 
                         Цель Techno Women – увеличить число девушек и женщин, работающих в технологических
                         отраслях,
@@ -63,8 +62,8 @@
     <section class="main__target">
         <div class="container">
             <div class="main__target-box1">
-                <h1 class="main__target-title">НАЙДИТЕ СВОЕ МЕСТО В НОВОМ ЦИФРОВОМ МИРЕ СТАНЬ УЧАСТНИЦЕЙ
-                    TECHNOWOMEN</h1>
+                <h2 class="main__target-title">НАЙДИТЕ СВОЕ МЕСТО В НОВОМ ЦИФРОВОМ МИРЕ СТАНЬ УЧАСТНИЦЕЙ
+                    TECHNOWOMEN</h2>
                 <div class="main__target-buttons">
                     <button class="main__target-buttons-btn">СТАТЬ УЧАСТНИЦЕЙ TECHNOWOMEN</button>
                     <button class="main__target-buttons-btn">СТАТЬ УЧАСТНИЦЕЙ TECHNOGIRL</button>
@@ -151,63 +150,22 @@
 
     </section>
 
+
     <section class="founder">
         <h2 class="founder-title">Основатели Techno Women</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
+                <% data.founders.data.FoundersList.forEach(item => {%>
+                    <div class="swiper-slide">
+                        <div class="founder-card">
+                            <img src="<%= domain %><%= item.Image.url %>" alt="" class="founder-card-img">
+                            <h3 class="founder-card-title"><%- item.FullName %></h3>
+                            <p class="founder-card-text">
+                                <%- item.Description.slice(0,100)%>
+                            </p>
+                        </div>
                     </div>
-
-
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
+                <%}) %>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -240,25 +198,26 @@
     </section>
 
 
-    <div class="overlay">
-        <div class="popup">
-            <span class="popup__close">x</span>
-            <form class="contact__form">
-                <label class="contact__form-fluid">
-                    <input type="text" placeholder="ФИО">
-                </label>
-                <label class="contact__form-fluid">
-                    <input type="email" placeholder="Email">
-                </label>
-                <label class="contact__form-fluid">
-                    <input type="number" placeholder="Тел:">
-                </label>
-                <button class="contact__form-btn" type="submit">
-                    Оставить заявку
-                </button>
-            </form>
+        <div class="overlay">
+            <div class="popup">
+                <span class="popup__close">x</span>
+                <form class="contact__form">
+                    <label class="contact__form-fluid">
+                        <input type="text" placeholder="ФИО">
+                    </label>
+                    <label class="contact__form-fluid">
+                        <input type="email" placeholder="Email">
+                    </label>
+                    <label class="contact__form-fluid">
+                        <input type="number" placeholder="Тел:">
+                    </label>
+                    <button class="contact__form-btn" type="submit">
+                        Оставить заявку
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
+
 </main>
 
 <%- include('../../partials/footer') %>

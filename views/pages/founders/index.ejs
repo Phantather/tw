@@ -13,66 +13,24 @@
         <h2 class="founder-title">Учередители Techno Women</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
+                <% data.data.FoundersList.forEach(item => {%>
+                    <div class="swiper-slide">
+                        <div class="founder-card">
+                            <img src="<%= domain %><%= item.Image.url %>" alt="" class="founder-card-img">
+                            <h3 class="founder-card-title"><%- item.FullName %></h3>
+                            <p class="founder-card-text">
+                                <%- item.Description.slice(0,100)%>
+                            </p>
+                        </div>
                     </div>
-
-
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-
-                    <div class="founder-card">
-                        <img src="/images/swiper/swiperImg.png" alt="" class="founder-card-img">
-                        <h3 class="founder-card-title">Сауле Жумажанова
-                        </h3>
-                        <p class="founder-card-text">Сауле Жумажанова – соучредитель компании Q Group; руководитель
-                            компании
-                            QazTiqet; партнер</p>
-                    </div>
-                </div>
+                <%}) %>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
     </section>
-
 </main>
+
 <%- include('../../partials/footer') %>
 
 <%- include('../../partials/foot') %>
