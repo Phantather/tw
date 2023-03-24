@@ -1,14 +1,12 @@
 @media (max-width: 1440px) {
 
 }
-
 @media (max-width: 1320px) {
   .main__history {
     &-text1 {
       font-size: 25px;
 
     }
-
     &-title {
       font-size: 50px;
       padding-bottom: 100px;
@@ -21,44 +19,37 @@
 
 
 }
-
 @media (max-width: 1200px) {
   .header__list {
     column-gap: 5px;
-
     &-item {
       font-size: 20px;
     }
   }
   .main__buttons {
     padding-right: 90px;
-
     &-btn {
       width: 270px;
       font-size: 20px;
     }
   }
-  .openTech__title {
+  .openTech__title{
     margin-left: 85px;
   }
 
 }
-
 @media (max-width: 992px) {
-  .inNumbers {
+  .inNumbers{
     padding: 130px 53px 170px 420px;
-
-    &__rightSvg {
-      z-index: -1;
+    &__rightSvg{
+      z-index: -1     ;
     }
-
-    &__leftImg {
+    &__leftImg{
       z-index: -1;
     }
   }
   .header {
     padding: 2% 0;
-    position: sticky;
   }
   .header__img {
     width: 70%;
@@ -69,7 +60,6 @@
   .main__buttons {
     row-gap: 12px;
     padding-top: 270px;
-
     &-btn {
       padding: 5px;
       font-size: 12px;
@@ -97,7 +87,6 @@
   }
   .info__cards {
     margin-top: 6%;
-
     .info__card {
       padding: 20px 0px 40px 40px;
 
@@ -111,35 +100,30 @@
 
   .main__history {
     padding: 32px 10% 45px 10%;
-
     &::before {
       bottom: -4%;
     }
   }
   .footer {
     padding: 2.5% 2.5%;
-
     &__text {
       font-size: 18px;
     }
-
     &__social {
       column-gap: 18px;
-
-      &-img {
+      &-img{
         width: 80%;
       }
     }
   }
 
 
-  .header__burger {
+  .header__burger{
     position: relative;
     right: 0;
     width: 33px;
     height: 33px;
     cursor: pointer;
-
     span {
       position: absolute;
       display: block;
@@ -167,15 +151,12 @@
         top: 8px;
       }
     }
-
-    &.open {
+    &.open{
       span {
         background: transparent;
-
         &:before {
           transform: rotate(45deg) translate(5px, 6.4px);
         }
-
         &:after {
           transform: rotate(-45deg) translate(5px, -6.4px);
         }
@@ -184,13 +165,12 @@
 
   }
 
-  .header__list {
+  .header__list{
     position: absolute;
     right: -100%;
     top: 100%;
     background-color: #fff;
     flex-direction: column;
-      align-items: center;
     max-height: 100vh;
     height: fit-content;
     border-bottom-left-radius: 10px;
@@ -199,23 +179,20 @@
     padding: 30px 0;
     transition: 0.3s;
     z-index: 100;
-
-    &.show {
+    &.show{
       right: 0;
     }
-
-    &-item {
+    &-item{
       padding: 15px;
       height: unset;
-
-      &:hover .header__sublist {
+      &:hover .header__sublist{
         transform: scale(1);
         right: 100%;
         top: 0;
       }
     }
   }
-  .header__sublist {
+  .header__sublist{
     display: unset;
     right: 0;
     top: -50%;
@@ -227,11 +204,10 @@
 
 
 }
-
 @media (max-width: 886px) {
   .header {
     padding: 1% 0;
-    position: sticky;
+    position: fixed;
 
     &__img {
       position: absolute;
@@ -239,21 +215,19 @@
       height: unset;
     }
   }
-  .main {
-    &__intro {
+  .main{
+    &__intro{
       max-height: 440px;
       height: 570px;
     }
-
-    &__box {
+    &__box{
       padding: 0 20px;
       justify-content: right;
       align-items: center;
       height: calc(100% - 100px);
       width: 100%;
     }
-
-    &__logo {
+    &__logo{
       position: absolute;
       left: 0;
       bottom: 0;
@@ -261,32 +235,27 @@
       height: unset;
       object-fit: contain;
     }
-
-    &__buttons {
+    &__buttons{
       padding: unset;
       padding-top: 140px;
       padding-right: 65px;
     }
-
     &__target {
       &-title {
         font-size: 20px;
       }
 
     }
-
     &__history {
 
       &-title {
         font-size: 30px;
         padding-bottom: 10px;
       }
-
       &-text1 {
         font-size: 20px;
         line-height: 25px;
       }
-
       &-list {
         padding-left: 3.5%;
       }
@@ -294,8 +263,9 @@
     }
 
 
+
   }
-  .history-list-item {
+  .history-list-item{
     font-size: 20px;
     line-height: 25px;
   }
@@ -308,7 +278,6 @@
 
 
     }
-
     &__social {
 
       &-img {
@@ -318,54 +287,46 @@
   }
 
 }
-
 @media (max-width: 768px) {
-  .founder-title {
+  .founder-title{
     font-size: 50px;
   }
-  .inNumbers {
+  .inNumbers{
     padding: 130px 0 170px 0;
     text-align: center;
-
-    &__title {
+    &__title{
       margin-bottom: 100px;
     }
-
-    &__list {
+    &__list{
       font-size: 30px;
     }
-
-    &__leftImg {
+    &__leftImg{
       display: none;
     }
-
-    &__circle {
+    &__circle{
       display: none;
     }
   }
-  .content__line {
+  .content__line{
     width: 100%;
   }
-  .content__block {
+  .content__block{
     flex-direction: column-reverse;
-
-    &-text {
+    &-text{
       width: 100%;
     }
-
-    &-img {
+    &-img{
       width: 100%;
     }
 
   }
-  .flexContainer__block-btn {
+  .flexContainer__block-btn{
     font-size: 13px;
     line-height: 0;
     width: 150px;
   }
   .partners {
     padding: 57px 60px 92px;
-
     &__row {
       display: flex;
       flex-direction: column;
@@ -373,34 +334,29 @@
       row-gap: 70px;
       align-items: center;
     }
-
-    &__img {
-      width: 70%;
-    }
+    &__img{
+      width: 70%;}
   }
-  .news {
+  .news{
     height: 510px;
 
   }
-  .openTech {
+  .openTech{
     height: 435px;
-
-    &__title {
+    &__title{
       font-size: 36px;
     }
-
-    &__btn {
+    &__btn{
       width: 400px;
       height: 74px;
     }
   }
   .main {
     &__history {
-      &-list {
+      &-list{
         padding-left: 25px;
       }
     }
-
     &__target-buttons-btn {
       font-size: 10px;
       padding: 2%;
@@ -412,7 +368,6 @@
       &-title {
         font-size: 20px;
       }
-
       &-item {
         font-size: 18px;
         line-height: 17px;
@@ -422,13 +377,11 @@
   .footer {
     flex-direction: column;
     row-gap: 30px;
-
     &__text {
       font-size: 16px;
 
 
     }
-
     &__social {
 
       &-img {
@@ -438,15 +391,14 @@
   }
 
 }
-
 @media (max-width: 676px) {
-  .founder-title {
+  .founder-title{
     font-size: 40px;
   }
-  .inNumbers__list {
+  .inNumbers__list{
     font-size: 27px;
   }
-  .news {
+  .news{
     height: 450px;
   }
   .main {
@@ -454,29 +406,25 @@
       font-size: 35px;
     }
   }
-  .openTech {
+  .openTech{
     height: 380px;
-
-    &__title {
+    &__title{
       font-size: 33px;
       line-height: 40px;
     }
   }
 }
-
 @media (max-width: 576px) {
-  .news {
+  .news{
     height: 390px;
   }
-  .openTech {
+  .openTech{
     height: 325px;
-
-    &__title {
+    &__title{
       font-size: 28px;
       line-height: 30px;
     }
-
-    &__btn {
+    &__btn{
       width: 350px;
       height: 65px;
     }
@@ -485,7 +433,6 @@
     &__title {
       font-size: 29px;
     }
-
     &__history {
       padding: 32px 2% 45px 2%;
 
@@ -493,19 +440,16 @@
         padding-left: 5.5%;
       }
     }
-
     &__buttons {
       padding-top: 95px;
       padding-right: 30px;
     }
-
     &__about-box1 {
       display: flex;
       flex-direction: column;
       align-items: center;
 
     }
-
     &__about-img {
       width: 100%;
     }
@@ -518,10 +462,8 @@
       flex-direction: column;
 
     }
-
     .info__card {
       width: 100%;
-
       &-item {
         font-size: 17px;
         line-height: 15px;
@@ -536,7 +478,6 @@
 
 
     }
-
     &__social {
 
       &-img {
@@ -546,9 +487,8 @@
   }
 
 }
-
 @media (max-width: 576px) {
-  .founder-title {
+  .founder-title{
     font-size: 35px;
   }
   .content__block-text {
@@ -560,14 +500,12 @@
     &__intro {
       max-height: 360px;
     }
-
     &__history {
 
       &-text1 {
         font-size: 16px;
         line-height: 20px;
       }
-
       &-list {
         padding-left: 19px !important;
       }
@@ -583,17 +521,14 @@
   }
 
 }
-
 @media (max-width: 500px) {
-  .openTech {
+  .openTech{
     height: 285px;
-
-    &__title {
+    &__title{
       font-size: 25px;
       text-align: center;
     }
-
-    &__btn {
+    &__btn{
       font-size: 30px;
       width: 300px;
       height: 50px;
@@ -613,21 +548,18 @@
 @media (max-width: 425px) {
   .news {
     height: 290px;
-
-    &__btn {
+    &__btn{
       font-size: 30px;
       width: 270px;
       height: 60px;
     }
   }
-  .openTech {
+  .openTech{
     height: 245px;
-
-    &__title {
+    &__title{
       font-size: 17px;
     }
-
-    &__btn {
+    &__btn{
       font-size: 25px;
       width: 250px;
       height: 45px;
@@ -637,17 +569,14 @@
     &__title {
       font-size: 23px;
     }
-
     &__logo {
       display: none;
     }
-
     &__buttons {
       width: 100%;
       padding: unset;
 
     }
-
     &__history {
       padding: 5px 2% 35px 2%;
     }
@@ -656,40 +585,33 @@
     &__text {
       font-size: 10px;
     }
-
     &__social {
       column-gap: 3px;
-
       &-img {
         width: 65%;
       }
     }
   }
 }
-
 @media (max-width: 375px) {
   .news {
     height: 250px;
-
-    &__title {
+    &__title{
       font-size: 30px;
     }
   }
   .footer {
     column-gap: 20px;
   }
-  .openTech {
+  .openTech{
     height: 215px;
-
-    &__title {
+    &__title{
       font-size: 15px;
     }
-
-    &__btn {
+    &__btn{
       width: 200px;
       height: 40px;
       font-size: 20px;
     }
   }
 }
-

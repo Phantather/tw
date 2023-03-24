@@ -166,7 +166,6 @@ button {
   }
   .header {
     padding: 2% 0;
-    position: sticky;
   }
   .header__img {
     width: 70%;
@@ -281,9 +280,6 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     max-height: 100vh;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -324,7 +320,7 @@ button {
 @media (max-width: 886px) {
   .header {
     padding: 1% 0;
-    position: sticky;
+    position: fixed;
   }
   .header__img {
     position: absolute;
@@ -1676,14 +1672,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 15px;
-     -moz-column-gap: 15px;
-          column-gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
   list-style: none;
 }
 .header__list-item {
-  width: 209px;
-  height: 34px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;

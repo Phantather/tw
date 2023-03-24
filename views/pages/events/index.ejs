@@ -28,50 +28,17 @@
             </form>
         </section>
         <section class="content">
-            <div class="content__block">
-                <p class="content__block-text">
+            <% data.response.data.forEach((item) => {%>
+                <div class="content__block">
+                    <p class="content__block-text">
+                        <%- item.Description %>
+                    </p>
 
-                    C 12 по 28 ноября 2022 года официальная делегация некоммерческой организации «Techno Women» посетила
-                    Соединенные Штаты Америки, с целью продвижения женщин-предпринимателей Казахстана на международном
-                    уровне, обменом опытом, поиска потенциальных партнеров и программ по развитию цифровых компетенций
-                    девочек и женщин. Команда единомышленниц посетила города Сан-Франциско и Лос-Анджелес. В ходе
-                    поездки были проведены ряд встреч с крупными…
-                    <br/> Подробнее
-                </p>
+                    <img class="<% data.domain %><%= item.Image.url %>" alt="events.png"/>
+                </div>
+            <%}) %>
 
-                <img class="content__block-img" src="../../../src/images/events/events.png" alt="events.png"/></div>
 
-            <div class="content__line"></div>
-        </section>
-        <section class="content">
-            <div class="content__block">
-                <p class="content__block-text">
-
-                    C 12 по 28 ноября 2022 года официальная делегация некоммерческой организации «Techno Women» посетила
-                    Соединенные Штаты Америки, с целью продвижения женщин-предпринимателей Казахстана на международном
-                    уровне, обменом опытом, поиска потенциальных партнеров и программ по развитию цифровых компетенций
-                    девочек и женщин. Команда единомышленниц посетила города Сан-Франциско и Лос-Анджелес. В ходе
-                    поездки были проведены ряд встреч с крупными…
-                    <br/> Подробнее
-                </p>
-
-                <img class="content__block-img" src="../../../src/images/events/events.png" alt="events.png"/></div>
-
-            <div class="content__line"></div>
-        </section>
-        <section class="content">
-            <div class="content__block">
-                <p class="content__block-text">
-
-                    C 12 по 28 ноября 2022 года официальная делегация некоммерческой организации «Techno Women» посетила
-                    Соединенные Штаты Америки, с целью продвижения женщин-предпринимателей Казахстана на международном
-                    уровне, обменом опытом, поиска потенциальных партнеров и программ по развитию цифровых компетенций
-                    девочек и женщин. Команда единомышленниц посетила города Сан-Франциско и Лос-Анджелес. В ходе
-                    поездки были проведены ряд встреч с крупными…
-                    <br/> Подробнее
-                </p>
-
-                <img class="content__block-img" src="../../../src/images/events/events.png" alt="events.png"/></div>
             <div class="content__line"></div>
         </section>
     </div>

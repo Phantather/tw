@@ -19,10 +19,6 @@ router.get(['/', '/founders'], async (req, res) => {
         data: response,
         domain: DOMAIN_PATH.slice(0, DOMAIN_PATH.length)
     });
-    res.render('./pages/home/index.ejs', {
-        data: response,
-        domain: DOMAIN_PATH.slice(0, DOMAIN_PATH.length)
-    });
 });
 
 

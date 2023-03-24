@@ -43,13 +43,12 @@
 
   &__list {
     display: flex;
-    column-gap: 15px;
+    align-items: center;
+    column-gap: 60px;
     list-style: none;
   }
 
   &__list-item {
-    width: 209px;
-    height: 34px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
