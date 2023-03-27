@@ -186,14 +186,15 @@
       padding: 15px;
       height: unset;
       &:hover .header__sublist{
-        transform: scale(1);
+        //transform: scale(1);
         right: 100%;
         top: 0;
+        transform: rotate(deg);
       }
     }
   }
   .header__sublist{
-    display: unset;
+    display: flex;
     right: 0;
     top: -50%;
     transition: 0.3s !important;

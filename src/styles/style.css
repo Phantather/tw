@@ -300,13 +300,15 @@ button {
     height: unset;
   }
   .header__list-item:hover .header__sublist {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     right: 100%;
     top: 0;
+    -webkit-transform: rotate(deg);
+            transform: rotate(deg);
   }
   .header__sublist {
-    display: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     right: 0;
     top: -50%;
     -webkit-transition: 0.3s !important;
