@@ -52,8 +52,9 @@ var swiper = new Swiper(".mySwiper",{
     // onmousewheel:true,
     // keyboard:true,
     autoplay: {
-        delay: 2000
+        delay: 3000
     },
+    speed: 1500,
     loop:true,
     breakpoints:{
         1200:{
@@ -63,10 +64,10 @@ var swiper = new Swiper(".mySwiper",{
             slidesPerView: 3,
         },
         992:{
-            slidesPerView:3,
+            slidesPerView: 3,
         },
-        886:{
-            slidesPerView:2,
+        885:{
+            slidesPerView:3,
         },
         768:{
             slidesPerView:2,

@@ -300,10 +300,10 @@ button {
     height: unset;
   }
   .header__list-item:hover .header__sublist {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     right: 100%;
     top: 0;
-    -webkit-transform: rotate(deg);
-            transform: rotate(deg);
   }
   .header__sublist {
     display: -webkit-box;
@@ -788,6 +788,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -795,14 +798,23 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 60px 18px 0px 41px;
+  padding: 60px 18px 20px 41px;
 }
 .main__about-box1-text {
-  font-family: "Inter";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  width: 60%;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 25px;
+  line-height: 22px;
   color: #0f2935;
 }
 .main__about-img {
@@ -810,8 +822,6 @@ button {
   filter: drop-shadow(10px 10px 100px rgba(245, 22, 143, 0.2));
   border-radius: 20px;
   width: 40%;
-  -o-object-fit: contain;
-  object-fit: contain;
 }
 
 .main__target {
@@ -1355,6 +1365,12 @@ button {
   row-gap: 32px;
   padding: 50px 0 70px 50px;
 }
+.content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #e81896;
+}
 .content__line {
   border-bottom: 1px solid black;
   width: 60%;
@@ -1363,17 +1379,25 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 30px;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+.content__block-card {
+  width: 50%;
+}
+.content__block-card img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
 }
 .content__block-text {
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   width: 60%;
-}
-.content__block-img {
-  width: 40%;
-  border-radius: 10px;
 }
 
 .calendar {
@@ -1507,14 +1531,14 @@ button {
 
 .founder {
   position: relative;
-  padding-bottom: 120px;
+  padding: 80px 0 120px;
 }
 .founder::after {
   content: "";
   background: url("../../images/swiper/ellipse.svg") center/cover no-repeat;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 75px;
   z-index: 3;
   width: 100%;
   height: 130px;
@@ -1574,11 +1598,36 @@ button {
   color: #fff !important;
 }
 
+@media (max-width: 992px) {
+  .founder-card-img {
+    max-height: 410px;
+  }
+  .founder::before {
+    height: 167px;
+  }
+  .founder::after {
+    height: 107px;
+  }
+}
 .inNumbers {
-  padding: 130px 53px 170px 536px;
+  padding: 160px 0 300px;
   position: relative;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .inNumbers__leftSvg {
   position: absolute;
@@ -1589,8 +1638,8 @@ button {
 .inNumbers__leftImg {
   position: absolute;
   left: -30px;
-  bottom: 50px;
-  z-index: 3;
+  bottom: -17px;
+  z-index: -3;
 }
 .inNumbers__rightSvg {
   position: absolute;
@@ -1603,26 +1652,24 @@ button {
   border: 1px solid rgba(233, 237, 28, 0.5019607843);
   border-radius: 50%;
   position: absolute;
-  top: 133px;
-  left: 381px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: -1;
-}
-.inNumbers__circle-right {
-  top: 133px;
-  left: 581px;
 }
 .inNumbers__title {
   font-weight: 400;
   font-size: 60px;
   line-height: 73px;
   color: #0F2935;
-  margin-bottom: 165px;
 }
 .inNumbers__list {
   font-weight: 500;
   font-size: 35px;
   line-height: 42px;
   color: #0F2935;
+  padding-left: 130px;
 }
 
 .header {
