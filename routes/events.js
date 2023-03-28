@@ -7,13 +7,17 @@ const router = Router()
 
 router.get('/events', async (req, res) => {
     let response = null
+    let dateQuery = req.query.date;
+    let query = !!dateQuery ? `&filters[Date]=${dateQuery}` : ''
     try {
-        await API.get('/events?populate=deep')
+        await API.get('/events?populate=deep' + query)
             .then(({data}) => response = data)
 
     } catch (err) {
         console.log(err)
     }
+
+    console.log(!!dateQuery, dateQuery, query)
 
     res.render('pages/events/index.ejs', {
         data: {

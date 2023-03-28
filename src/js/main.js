@@ -9,6 +9,14 @@ window.addEventListener('scroll', function() {
     }
 });
 
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
 
 //select
@@ -101,13 +109,28 @@ Array.from(btn).forEach((item) => {
     })
 })
 
-close.addEventListener('click', () => {
-    overlay.style.display = 'none'
-})
+// close.addEventListener('click', () => {
+//     overlay.style.display = 'none'
+// })
+//
+// overlay.addEventListener('click', (e) => {
+//     if (e.target.className === 'overlay') {
+//         overlay.style.display = 'none'
+//     }
+// })
 
-overlay.addEventListener('click', (e) => {
-    if (e.target.className === 'overlay') {
-        overlay.style.display = 'none'
-    }
-})
+//Form events filter/search
+let eventForm = document.querySelector('#events_form')
+let eventCalendar = document.querySelector('.calendar__input')
+let eventCurrentDate = document.querySelector('.calendar__today')
 
+// let currentDate = new Date().toJSON().slice(0, 10)
+// eventCurrentDate.addEventListener('click', () => {
+//     new URLSearchParams({date: currentDate}).toString()
+// })
+
+eventForm.addEventListener('submit', () => {
+    new URLSearchParams(new FormData(eventForm)).toString()
+})
+eventCalendar.value = getParameterByName('date')
+eventCalendar.addEventListener('change', () => eventForm.submit())

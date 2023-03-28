@@ -11,7 +11,7 @@
 <main>
     <div class="container">
         <section class="nav">
-            <form class="flexContainer">
+            <form class="flexContainer" >
                 <input class="flexContainer__input"
                        placeholder="Поиск мероприятий"
                        type="search"
@@ -23,12 +23,12 @@
         </section>
         <section class="calendar">
             <p class="calendar__today">Сегодня</p>
-            <form class="calendar__block">
-                <input type="date" class="calendar__input">
+            <form class="calendar__block" id="events_form">
+                <input name="date" type="date" class="calendar__input">
             </form>
         </section>
         <section class="content">
-            <% data.response.data.forEach((item) => {%>
+            <% if(!!data.response) { data.response.data.forEach((item) => {%>
                 <h2><%- item.Title%></h2>
                 <div class="content__block">
                     <p class="content__block-text">
@@ -40,10 +40,9 @@
                     </div>
                 </div>
                 <div class="content__line"></div>
-            <%}) %>
-
-
-
+            <%})} else {%>
+                    <div>НУ! Найдено</div>
+                <%} %>%>
         </section>
     </div>
 
