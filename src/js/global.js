@@ -17,3 +17,7 @@ languageSelect.addEventListener('change', ({ target: { value } }) => {
   window.location.reload();
 });
 //Language switcher end
+
+// let formApplication = document.querySelector('#form-application');
+
+// formApplication.addEventListener('')
