@@ -14,11 +14,15 @@ const missionRoute = require('./routes/mission')
 const newsRoute = require('./routes/news')
 const projectsRoute = require('./routes/projects')
 const supportRoute = require('./routes/support')
+const i18n = require('./i18n')
 
 //Base port
 const PORT = process.env.PORT || 4000
 
 app.set('view engine', 'ejs')
+
+//Config
+app.use(i18n.init)
 
 //read files
 app.use(express.static(__dirname + '/src'));
