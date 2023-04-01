@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+//Functions
+const { getCookieFromHeaders } = require('./src/js/cookies');
+
 //Require Routes
 const homeRoute = require('./routes/home');
 const archiveRoute = require('./routes/archive');
@@ -24,11 +27,9 @@ app.set('view engine', 'ejs');
 //Config
 app.use(i18n.init);
 app.use(function (req, res, next) {
-  console.log(req);
-  //   let { lang } = req.query;
-  //   i18n.init(req, res);
-  //   lang = lang ? lang : 'ru';
-  //   i18n.setLocale(req, lang);
+  let lang = getCookieFromHeaders('lang', req.headers.cookie) || 'ru';
+  i18n.init(req, res);
+  i18n.setLocale(req, lang);
   return next();
 });
 
