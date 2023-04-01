@@ -5,11 +5,12 @@ const DOMAIN_PATH = require('../configs/variables');
 const router = Router();
 
 router.get('/', async (req, res) => {
+  let lng = req.getLocale();
   let response = null;
   try {
     await Promise.all([
       API.get('/global'),
-      API.get('/founders-page?populate=deep'),
+      API.get(`/founders-page?populate=deep&locale=${lng}`),
     ]).then(
       (res) => (response = { global: res[0].data, founders: res[1].data })
     );

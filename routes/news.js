@@ -6,8 +6,9 @@ const router = Router();
 
 router.get('/news', async (req, res) => {
   let response = null;
+  let lng = req.getLocale();
   try {
-    await API.get('/news?populate=PreviewImage').then(
+    await API.get(`/news?locale=${lng}&populate=PreviewImage`).then(
       ({ data }) => (response = data)
     );
   } catch (err) {
