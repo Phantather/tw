@@ -52,5 +52,5 @@ app.use(supportRoute);
 
 //Запуск сервера
 app.listen(PORT, () => {
-  console.log('Сервер запущен на порту 4000');
+  console.log(`Сервер запущен, адрес - http://localhost:${PORT}`);
 });
