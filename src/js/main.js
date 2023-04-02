@@ -98,6 +98,17 @@ function overlayPopupEvent() {
   let btn = document.querySelectorAll('.main__buttons-btn ');
   let close = document.querySelector('.popup__close');
 
+  close.addEventListener('click', () => {
+    overlay.style.display = 'none'
+  })
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target.className === 'overlay') {
+      overlay.style.display = 'none'
+    }
+  })
+
+
   Array.from(btn).forEach((item) => {
     item.addEventListener('click', () => {
       overlay.style.display = 'flex';
@@ -105,15 +116,6 @@ function overlayPopupEvent() {
   });
 }
 
-// close.addEventListener('click', () => {
-//     overlay.style.display = 'none'
-// })
-//
-// overlay.addEventListener('click', (e) => {
-//     if (e.target.className === 'overlay') {
-//         overlay.style.display = 'none'
-//     }
-// })
 
 //Form events filter/search
 function eventsFilterSearch() {
@@ -127,6 +129,14 @@ function eventsFilterSearch() {
   eventCalendar.value = getParameterByName('date');
   eventCalendar.addEventListener('change', () => eventForm.submit());
 }
+
+
+
+let im = new Inputmask("+\\9\\96 (999) 99-99-99");
+
+let formTel = document.querySelector('#tel')
+
+im.mask(formTel);
 
 //Call functions
 headerScrollEvent();
