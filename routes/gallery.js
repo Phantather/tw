@@ -18,6 +18,15 @@ router.get('/gallery', async (req, res) => {
   res.render('./pages/gallery/index.ejs', {
     data: response,
     domain: DOMAIN_PATH.slice(0, DOMAIN_PATH.length),
+    SEO: {
+      title: response?.data.GalleriesSEO.metaTitle,
+      description: response?.data.GalleriesSEO.metaDescription,
+      image: response?.data.GalleriesSEO.metaImage.url,
+      keywords: response?.data.GalleriesSEO.keywords,
+      structuredData: response?.data.GalleriesSEO.structuredData,
+      canonicalURL: response?.data.GalleriesSEO.canonicalURL,
+      viewport: response?.data.GalleriesSEO.metaViewport,
+    }
   }); // Переход на страницу "Контакты"
 });
 

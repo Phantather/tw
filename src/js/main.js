@@ -41,7 +41,7 @@ function getParameterByName(name, url = window.location.href) {
 //   },
 // });
 
-function globalSwiperCallback() {
+
     var swiper = new Swiper('.mySwiper', {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -89,24 +89,20 @@ function globalSwiperCallback() {
             },
         },
     });
-}
+
 
 function overlayPopupEvent() {
     let overlay = document.querySelector('.overlay');
     let btn = document.querySelectorAll('.main__buttons-btn ');
     let close = document.querySelector('.popup__close');
-
     close.addEventListener('click', () => {
         overlay.style.display = 'none'
     })
-
     overlay.addEventListener('click', (e) => {
         if (e.target.className === 'overlay') {
             overlay.style.display = 'none'
         }
     })
-
-
     Array.from(btn).forEach((item) => {
         item.addEventListener('click', () => {
             overlay.style.display = 'flex';
@@ -137,6 +133,6 @@ im.mask(formTel);
 
 //Call functions
 
-globalSwiperCallback();
+
 overlayPopupEvent();
 eventsFilterSearch();

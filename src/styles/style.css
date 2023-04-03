@@ -1099,13 +1099,11 @@ button {
 }
 .new__card {
   border-radius: 20px;
-  padding: 5px 5px 30px;
+  padding: 5px 10px 30px;
   border: 2px solid #E81896;
-  width: calc(33.33333% - 13.33333px);
-  max-height: 600px;
+  width: calc(50% - 10px);
   -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
           box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
-  overflow: hidden;
 }
 .new__card-desc {
   margin: 20px 0 15px;
