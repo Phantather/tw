@@ -15,9 +15,19 @@ router.get(['/', '/founders'], async (req, res) => {
     console.log(err);
   }
 
+
   res.render('./pages/founders/index.ejs', {
     data: response,
     domain: DOMAIN_PATH.slice(0, DOMAIN_PATH.length),
+    SEO: {
+      title: response?.data.FoundersSEO.metaTitle,
+      description: response?.data.FoundersSEO.metaDescription,
+      image: response?.data.FoundersSEO.metaImage.url,
+      keywords: response?.data.FoundersSEO.keywords,
+      structuredData: response?.data.FoundersSEO.structuredData,
+      canonicalURL: response?.data.FoundersSEO.canonicalURL,
+      viewport: response?.data.FoundersSEO.metaViewport,
+    }
   });
 });
 

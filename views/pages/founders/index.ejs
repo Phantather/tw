@@ -1,4 +1,42 @@
-<%- include('../../partials/head') %>
+<head>
+    <meta charset="UTF-8" />
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+            name="description"
+            content="<%= SEO.description %>"
+    />
+    <meta
+            name="keywords"
+            content="<%= SEO.keywords %>"
+    />
+<!--    Open graph -->
+    <meta property="og:url" content="<%= SEO.canonicalURL %>" />
+    <meta property="og:type" content="message/news" />
+    <meta property="og:title" content="<%= SEO.title %>" />
+    <meta
+            property="og:description"
+            content="<%= SEO.description %>"
+    />
+    <meta property="og:image" content="https://technowomen.kg/logo.svg" />
+
+<!--    Twitter -->
+    <meta name="twitter:card" content="<%= SEO.image %>" />
+    <meta property="twitter:domain" content="technowomen.kg" />
+    <meta property="twitter:url" content="<%= SEO.canonicalURL %>" />
+    <meta name="twitter:title" content="<%= SEO.title %>" />
+    <meta
+            name="twitter:description"
+            content="<%= SEO.description %>"
+    />
+    <meta name="twitter:image" content="<%= SEO.image %>" />
+    <title><%= SEO.title %></title>
+
+    <%- include('../../partials/headMedia') %>
+</head>
 
 <body>
 
