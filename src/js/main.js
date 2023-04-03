@@ -1,4 +1,4 @@
-function headerScrollEvent() {
+
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.header');
         const scrollPosition = window.scrollY;
@@ -8,7 +8,7 @@ function headerScrollEvent() {
             header.classList.remove('scrolled');
         }
     });
-}
+
 
 function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -20,7 +20,7 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 // Burger
-function burgerEvent() {
+
     const burger = document.querySelector('.header__burger');
     const headerList = document.querySelector('.header__list');
 
@@ -29,7 +29,7 @@ function burgerEvent() {
         burger.classList.toggle('open');
         headerList.classList.toggle('show');
     });
-}
+
 
 //swiper
 // var swiper = new Swiper('.glSwiper', {
@@ -136,8 +136,7 @@ let formTel = document.querySelector('#tel')
 im.mask(formTel);
 
 //Call functions
-headerScrollEvent();
-burgerEvent();
+
 globalSwiperCallback();
 overlayPopupEvent();
 eventsFilterSearch();
