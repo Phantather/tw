@@ -77,6 +77,12 @@
   .swiper-button-next::after {
     color: #fff !important;
   }
+  .foundSwiper {
+    height: 70%;
+  }
+  &_second::before {
+    height: 190px;
+  }
 }
 
 @media (max-width: 992px) {

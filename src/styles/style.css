@@ -8,17 +8,6 @@
   text-decoration: none;
 }
 
-body {
-  overflow-x: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 button {
   cursor: pointer;
   border: none;
@@ -263,6 +252,38 @@ button {
   }
   .openTech__title {
     margin-left: 85px;
+  }
+}
+@media (max-width: 1024px) {
+  .header__list {
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+  }
+  .main__title {
+    font-size: 45px !important;
+  }
+  .main__target-title {
+    font-size: 40px !important;
+  }
+  .info__card-item {
+    font-size: 22px !important;
+  }
+  .founder-card-img {
+    height: 410px;
+  }
+  .founder::before {
+    bottom: 20px !important;
+  }
+  .partners__img {
+    width: calc(50% - 100px) !important;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    row-gap: 50px;
   }
 }
 @media (max-width: 992px) {
@@ -799,10 +820,9 @@ button {
   }
 }
 .main__intro {
+  padding-top: 100px;
   position: relative;
   background: linear-gradient(138.29deg, #f5168f 0%, #552de5 95.87%);
-  width: 100%;
-  height: 667px;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -810,10 +830,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-top: 33px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+}
+.main__logo {
+  width: 50%;
 }
 .main__title {
   font-family: "Inter";
@@ -823,7 +848,6 @@ button {
   line-height: 61px;
   text-align: center;
   color: #ffffff;
-  padding-top: 40px;
 }
 .main__text {
   font-family: "Inter";
@@ -833,12 +857,6 @@ button {
   line-height: 61px;
   text-align: center;
   color: #ffffff;
-}
-.main__logo {
-  width: 535px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 .main__buttons {
   display: -webkit-box;
@@ -852,8 +870,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 28px;
-  padding-top: 158px;
-  padding-right: 120px;
 }
 .main__buttons-btn {
   width: 386px;
@@ -887,15 +903,11 @@ button {
   outline: none;
 }
 .main__about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 74px;
-  width: 100%;
-  border: 5px solid #e81896;
-  border-radius: 20px;
+  padding: 100px 0;
 }
 .main__about-box1 {
+  border: 3px solid #e81896;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,7 +921,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 60px 18px 20px 41px;
+  padding: 60px 40px 30px;
 }
 .main__about-box1-text {
   display: -webkit-box;
@@ -920,11 +932,11 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 30px;
-  width: 60%;
+  width: 55%;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 22px;
   color: #0f2935;
 }
@@ -932,7 +944,7 @@ button {
   -webkit-filter: drop-shadow(10px 10px 100px rgba(245, 22, 143, 0.2));
   filter: drop-shadow(10px 10px 100px rgba(245, 22, 143, 0.2));
   border-radius: 20px;
-  width: 40%;
+  width: 45%;
 }
 
 .main__target {
@@ -942,7 +954,6 @@ button {
   display: flex;
   background: url(../images/target.svg) center/cover no-repeat fixed;
   padding: 149px 0 176px;
-  margin-top: 46px;
 }
 .main__target::after {
   content: "";
@@ -957,12 +968,6 @@ button {
   position: relative;
   z-index: 2;
 }
-.main__target__target-box1-img {
-  width: 1823px;
-  height: 713px;
-  left: 0;
-  top: 0;
-}
 .main__target-title {
   font-family: "Inter";
   font-style: normal;
@@ -971,7 +976,7 @@ button {
   line-height: 61px;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 101px;
+  margin-bottom: 95px;
 }
 .main__target-buttons {
   display: -webkit-box;
@@ -1357,17 +1362,15 @@ button {
 }
 
 .info {
-  margin-bottom: 5%;
-  background: #FFFFFF;
+  padding: 100px 0;
 }
 .info__cards {
-  margin-top: 158px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 40px;
-     -moz-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
   row-gap: 40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1377,7 +1380,11 @@ button {
   background: linear-gradient(180deg, #6828CF 0%, #F11792 93.23%, rgba(3, 3, 3, 0) 100%);
   border-radius: 20px;
   padding: 49px 5px 89px 40px;
-  width: calc(50% - 20px);
+  width: calc(50% - 15px);
+}
+.info__card_second {
+  position: relative;
+  top: 30px;
 }
 .info__card-box1 {
   display: -webkit-box;
@@ -1398,41 +1405,9 @@ button {
   font-size: 25px;
   line-height: 30px;
   color: #FFFFFF;
+  margin-bottom: 25px;
 }
-.info__card-item {
-  list-style-type: circle;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
-  color: #FFFFFF;
-  padding-top: 31px;
-}
-
-.info {
-  background: #FFFFFF;
-}
-.info__cards {
-  margin-top: 158px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 40px;
-     -moz-column-gap: 40px;
-          column-gap: 40px;
-  row-gap: 40px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.info__card {
-  background: -webkit-gradient(linear, left top, left bottom, from(#6828CF), color-stop(93.23%, #F11792), to(rgba(3, 3, 3, 0)));
-  background: linear-gradient(180deg, #6828CF 0%, #F11792 93.23%, rgba(3, 3, 3, 0) 100%);
-  border-radius: 20px;
-  padding: 49px 5px 89px 40px;
-  width: calc(50% - 20px);
-}
-.info__card-box1 {
+.info__card-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1440,17 +1415,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.info__card-title {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  color: #FFFFFF;
+  row-gap: 20px;
 }
 .info__card-item {
   list-style-type: circle;
@@ -1460,7 +1425,6 @@ button {
   font-size: 25px;
   line-height: 30px;
   color: #FFFFFF;
-  padding-top: 31px;
 }
 
 .content {
@@ -1706,6 +1670,12 @@ button {
 .founder .swiper-button-next::after {
   color: #fff !important;
 }
+.founder .foundSwiper {
+  height: 70%;
+}
+.founder_second::before {
+  height: 190px;
+}
 
 @media (max-width: 992px) {
   .founder-card-img {
@@ -1723,20 +1693,6 @@ button {
   position: relative;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 80px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .inNumbers__leftSvg {
   position: absolute;
@@ -1772,8 +1728,30 @@ button {
   font-size: 60px;
   line-height: 73px;
   color: #0F2935;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.inNumbers__nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .inNumbers__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
   font-weight: 500;
   font-size: 35px;
   line-height: 42px;
@@ -1899,10 +1877,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-column-gap: 200px;
      -moz-column-gap: 200px;
           column-gap: 200px;
+  row-gap: 100px;
   margin-top: 208px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .partners__img {
   width: calc(33.3333% - 133.3333px);

@@ -13,9 +13,11 @@
 
   &__row {
     display: flex;
+    justify-content: center;
     column-gap: 200px;
+    row-gap: 100px;
     margin-top: 208px;
-
+    flex-wrap: wrap;
   }
 
   &__img {

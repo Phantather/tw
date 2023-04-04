@@ -1,13 +1,12 @@
-
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('.header');
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('.header');
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
 
 
 function getParameterByName(name, url = window.location.href) {
@@ -21,14 +20,14 @@ function getParameterByName(name, url = window.location.href) {
 
 // Burger
 
-    const burger = document.querySelector('.header__burger');
-    const headerList = document.querySelector('.header__list');
+const burger = document.querySelector('.header__burger');
+const headerList = document.querySelector('.header__list');
 
-    burger.addEventListener('click', () => {
-        console.log('Click');
-        burger.classList.toggle('open');
-        headerList.classList.toggle('show');
-    });
+burger.addEventListener('click', () => {
+    console.log('Click');
+    burger.classList.toggle('open');
+    headerList.classList.toggle('show');
+});
 
 
 //swiper
@@ -42,54 +41,100 @@ function getParameterByName(name, url = window.location.href) {
 // });
 
 
-    var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // onmousewheel:true,
+    // keyboard:true,
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 1500,
+    loop: true,
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
         },
-        // onmousewheel:true,
-        // keyboard:true,
-        autoplay: {
-            delay: 3000,
+        1024: {
+            slidesPerView: 3,
         },
-        speed: 1500,
-        loop: true,
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-            992: {
-                slidesPerView: 3,
-            },
-            885: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            676: {
-                slidesPerView: 1,
-            },
-            577: {
-                slidesPerView: 1,
-            },
-            475: {
-                slidesPerView: 1,
-            },
-            425: {
-                slidesPerView: 1,
-            },
-            320: {
-                slidesPerView: 1,
-            },
+        992: {
+            slidesPerView: 3,
         },
-    });
-
+        885: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        676: {
+            slidesPerView: 1,
+        },
+        577: {
+            slidesPerView: 1,
+        },
+        475: {
+            slidesPerView: 1,
+        },
+        425: {
+            slidesPerView: 1,
+        },
+        320: {
+            slidesPerView: 1,
+        },
+    },
+});
+var swiper = new Swiper('.foundSwiper', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // onmousewheel:true,
+    // keyboard:true,
+    autoplay: {
+        delay: 3000,
+    },
+    speed: 1500,
+    loop: true,
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        885: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        676: {
+            slidesPerView: 1,
+        },
+        577: {
+            slidesPerView: 1,
+        },
+        475: {
+            slidesPerView: 1,
+        },
+        425: {
+            slidesPerView: 1,
+        },
+        320: {
+            slidesPerView: 1,
+        },
+    },
+});
 
 function overlayPopupEvent() {
     let overlay = document.querySelector('.overlay');
