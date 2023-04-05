@@ -27,16 +27,11 @@
     }
   }
   .main__buttons {
-    padding-right: 90px;
     &-btn {
       width: 270px;
       font-size: 20px;
     }
   }
-  .openTech__title{
-    margin-left: 85px;
-  }
-
 }
 
 @media (max-width: 1024px) {
@@ -89,13 +84,15 @@
   }
   .main__buttons {
     row-gap: 12px;
-    padding-top: 270px;
     &-btn {
       padding: 5px;
       font-size: 12px;
       width: 195px;
     }
 
+  }
+  .inNumbers__leftImg {
+    display: none;
   }
 
   .main__about-box1 {
@@ -237,7 +234,6 @@
 @media (max-width: 886px) {
   .header {
     padding: 1% 0;
-    position: fixed;
 
     &__img {
       position: absolute;
@@ -246,29 +242,15 @@
     }
   }
   .main{
-    &__intro{
-      max-height: 440px;
-      height: 570px;
-    }
-    &__box{
-      padding: 0 20px;
-      justify-content: right;
-      align-items: center;
-      height: calc(100% - 100px);
-      width: 100%;
-    }
     &__logo{
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 50%;
-      height: unset;
-      object-fit: contain;
+      display: none;
+    }
+    &__box {
+      justify-content: center;
+      padding-bottom: 80px;
     }
     &__buttons{
-      padding: unset;
-      padding-top: 140px;
-      padding-right: 65px;
+      margin-top: 140px;
     }
     &__target {
       &-title {
@@ -291,9 +273,18 @@
       }
 
     }
-
-
-
+  }
+  .main__about-box1 {
+    flex-direction: column!important;
+    &-text {
+      width: 100% !important;
+    }
+  }
+  .main__about-img {
+    width: 100%!important;
+  }
+  .main__target-title {
+    font-size: 35px!important;
   }
   .history-list-item{
     font-size: 20px;
@@ -315,7 +306,27 @@
       }
     }
   }
-
+  .info__card {
+    width: 100% !important;
+    &_second {
+      top: 0!important;
+    }
+  }
+  .openTech__title {
+    font-size: 35px;
+  }
+  .inNumbers__list {
+    font-size: 33px;
+  }
+  .founder-title{
+    margin-bottom: 40px;
+  }
+  .founder::before {
+    height: 124px!important;
+  }
+  .founder::after {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .founder-title{
@@ -357,13 +368,13 @@
   }
   .partners {
     padding: 57px 60px 92px;
-    &__row {
-      display: flex;
-      flex-direction: column;
-      margin-top: 50px;
-      row-gap: 70px;
-      align-items: center;
-    }
+    //&__row {
+    //  display: flex;
+    //  flex-direction: column;
+    //  margin-top: 50px;
+    //  row-gap: 70px;
+    //  align-items: center;
+    //}
     &__img{
       width: 70%;}
   }
@@ -374,7 +385,7 @@
   .openTech{
     height: 435px;
     &__title{
-      font-size: 36px;
+      font-size: 35px!important;
     }
     &__btn{
       width: 400px;
@@ -386,6 +397,9 @@
       &-list{
         padding-left: 25px;
       }
+    }
+    &__target-title {
+      font-size: 30px!important;
     }
     &__target-buttons-btn {
       font-size: 10px;
@@ -404,23 +418,17 @@
       }
     }
   }
-  .footer {
-    flex-direction: column;
-    row-gap: 30px;
-    &__text {
-      font-size: 16px;
 
-
-    }
-    &__social {
-
-      &-img {
-        width: 70%;
-      }
-    }
+  .inNumbers__list {
+    text-align: left;
+    font-size: 27px!important;
+  }
+  .founder-title {
+    font-size: 47px!important;
   }
 
 }
+
 @media (max-width: 676px) {
   .founder-title{
     font-size: 40px;
