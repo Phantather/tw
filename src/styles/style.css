@@ -621,11 +621,39 @@ button {
   }
 }
 @media (max-width: 676px) {
+  .main__title {
+    font-size: 40px !important;
+  }
+  .main__target-title {
+    font-size: 26px !important;
+    line-height: 40px !important;
+  }
+  .openTech__title {
+    font-size: 30px !important;
+  }
+  .openTech__btn {
+    width: 390px !important;
+    height: 70px !important;
+    font-size: 35px !important;
+  }
+  .inNumbers__list {
+    text-align: left;
+    font-size: 23px !important;
+    line-height: 24px !important;
+  }
   .founder-title {
     font-size: 40px;
   }
-  .inNumbers__list {
-    font-size: 27px;
+  .founder::before {
+    height: 135px !important;
+  }
+  .founder .swiper {
+    padding: 0 150px;
+  }
+  .founder-card-img {
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+    max-height: 440px !important;
   }
   .news {
     height: 450px;
@@ -640,8 +668,17 @@ button {
     font-size: 33px;
     line-height: 40px;
   }
+  .partners__img {
+    width: 50% !important;
+  }
+  .footer__text {
+    font-size: 22px;
+  }
 }
 @media (max-width: 576px) {
+  .main__title {
+    font-size: 34px !important;
+  }
   .news {
     height: 390px;
   }
@@ -666,20 +703,18 @@ button {
     padding-left: 5.5%;
   }
   .main__buttons {
-    padding-top: 95px;
-    padding-right: 30px;
+    margin-top: 30px;
+  }
+  .main__buttons-btn {
+    font-size: 16px !important;
+    width: 240px !important;
+    padding: 10px !important;
+  }
+  .main__text {
+    font-size: 25px !important;
   }
   .main__about-box1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin: 0 !important;
   }
   .main__about-img {
     width: 100%;
@@ -697,8 +732,27 @@ button {
     width: 100%;
   }
   .info .info__card-item {
-    font-size: 17px;
-    line-height: 15px;
+    line-height: 34px;
+  }
+  .openTech__title {
+    font-size: 23px !important;
+  }
+  .openTech__btn {
+    width: 290px !important;
+    height: 55px !important;
+    font-size: 25px !important;
+  }
+  .inNumbers__title {
+    font-size: 48px !important;
+  }
+  .inNumbers__list {
+    padding-left: 100px;
+  }
+  .founder-title {
+    font-size: 34px !important;
+  }
+  .footer__text {
+    font-size: 18px !important;
   }
   .footer__text {
     font-size: 16px;
@@ -707,117 +761,63 @@ button {
     width: 80%;
   }
 }
-@media (max-width: 576px) {
-  .founder-title {
-    font-size: 35px;
-  }
-  .content__block-text {
-    font-size: 21px;
-    line-height: 30px;
-  }
-  .main__intro {
-    max-height: 360px;
-  }
-  .main__history-text1 {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .main__history-list {
-    padding-left: 19px !important;
-  }
-  .history-list-item {
-    font-size: 16px;
-    line-height: 20px;
-  }
-}
 @media (max-width: 500px) {
-  .openTech {
-    height: 285px;
+  .main__title {
+    line-height: 43px !important;
   }
-  .openTech__title {
-    font-size: 25px;
-    text-align: center;
+  .founder::before {
+    height: 150px !important;
   }
-  .openTech__btn {
-    font-size: 30px;
-    width: 300px;
-    height: 50px;
+  .founder .swiper {
+    padding: 0 80px;
   }
-  .header {
-    padding: 4% 0;
+  .partners__img {
+    width: 80% !important;
   }
-  .header__logo {
-    width: 80px;
-    height: 45px;
+  .footer__text {
+    font-size: 16px !important;
   }
 }
 @media (max-width: 425px) {
-  .news {
-    height: 290px;
+  .main__target-title {
+    margin-bottom: 60px;
   }
-  .news__btn {
-    font-size: 30px;
-    width: 270px;
-    height: 60px;
-  }
-  .openTech {
-    height: 245px;
+  .main__target-buttons-btn {
+    font-size: 17px !important;
   }
   .openTech__title {
-    font-size: 17px;
+    text-align: center;
+    line-height: 33px !important;
   }
-  .openTech__btn {
-    font-size: 25px;
-    width: 250px;
-    height: 45px;
+  .openTech {
+    padding: 130px 0 !important;
+    height: 435px;
   }
-  .main__title {
-    font-size: 23px;
+  .inNumbers__list {
+    padding-left: 40px !important;
   }
-  .main__logo {
-    display: none;
+  .founder-title {
+    font-size: 27px !important;
   }
-  .main__buttons {
-    width: 100%;
-    padding: unset;
+  .founder::before {
+    height: 140px !important;
   }
-  .main__history {
-    padding: 5px 2% 35px 2%;
-  }
-  .footer__text {
-    font-size: 10px;
-  }
-  .footer__social {
-    -webkit-column-gap: 3px;
-       -moz-column-gap: 3px;
-            column-gap: 3px;
-  }
-  .footer__social-img {
-    width: 65%;
-  }
-}
-@media (max-width: 375px) {
-  .news {
-    height: 250px;
+  .founder .swiper {
+    padding: 0 20px;
   }
   .news__title {
-    font-size: 30px;
+    font-size: 31px !important;
   }
-  .footer {
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+  .news__btn {
+    width: 250px !important;
+    height: 50px !important;
+    font-size: 30px !important;
   }
-  .openTech {
-    height: 215px;
+  .partners__row {
+    margin-top: 100px !important;
   }
-  .openTech__title {
-    font-size: 15px;
-  }
-  .openTech__btn {
-    width: 200px;
-    height: 40px;
-    font-size: 20px;
+  .footer__text {
+    font-size: 13px !important;
   }
 }
 .main__intro {
@@ -1814,7 +1814,6 @@ button {
 
 .openTech {
   background: url("../images/openTech/img.jpg") center/cover no-repeat;
-  background-size: 100%;
   position: relative;
   padding: 170px 0;
 }
