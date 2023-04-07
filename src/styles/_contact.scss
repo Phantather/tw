@@ -108,3 +108,10 @@
     width: 100%;
   }
 }
+
+@media (max-width: 320px) {
+ .contact__info-link {
+   font-size: 18px;
+ }
+}
+

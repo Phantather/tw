@@ -1,18 +1,24 @@
 .news {
   background: url("../images/news/newsImg.png") no-repeat center fixed;
-  background-size: 100%;
-
-  height: 570px;
-
-
-  &__overlay {
+  padding: 250px 0;
+  position: relative;
+  &::before {
+    content: "";
     background: linear-gradient(180deg, rgba(170, 34, 183, 0.7) 0%, rgba(121, 41, 210, 0.7) 0.01%);
+    width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__overlay {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     row-gap: 25px;
+    position: relative;
+    z-index: 2;
   }
 
   &__title {

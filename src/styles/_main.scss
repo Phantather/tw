@@ -194,7 +194,7 @@
 
 .main__history {
   position: relative;
-  padding: 102px 124px 115px 110px;
+  padding: 102px 0 110px;
   ol {
     list-style-type: decimal !important;
     padding-left: 35px;
@@ -254,4 +254,41 @@
   //   line-height: 36px;
   //   color: #0f2935;
   // }
+}
+
+@media (max-width: 992px) {
+  .main__history {
+    .md p{
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 886px) {
+  .main__history .md p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 676px) {
+  .main__history .md p {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main__history .md p {
+    font-size: 19px;
+    line-height: 31px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__history .md p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .main__history ol {
+    font-size: 17px;
+  }
 }

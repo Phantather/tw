@@ -57,12 +57,44 @@
   .new__card-main {
     width: 100%;
     img {
-      height: 300px;
+      height: 450px;
     }
   }
   .new__card {
+    flex-direction: column;
     img {
-      height: 200px;
+      width: 100%;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .new__card-main img {
+    object-fit: contain;
+    max-height: 400px;
+  }
+  .new__card img {
+    object-fit: contain;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 375px) {
+  .new__card-main img {
+    max-height: 300px;
+  }
+  .new__card img {
+    object-fit: contain;
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 320px) {
+  .new__card-main img {
+    max-height: 260px;
+  }
+  .new__card img {
+    object-fit: contain;
+    max-height: 200px;
   }
 }
