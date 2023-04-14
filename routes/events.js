@@ -10,7 +10,7 @@ router.get('/events', async (req, res) => {
   let dateQuery = req.query.date;
   let query = !!dateQuery ? `&filters[Date]=${dateQuery}` : '';
   try {
-    await API.get(`/events?populate=deep&locale=${lng}${qury}`).then(
+    await API.get(`/events?populate=deep&locale=${lng}${query}`).then(
       ({ data }) => (response = data)
     );
   } catch (err) {

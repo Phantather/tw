@@ -13,16 +13,21 @@
     <div class="container">
         <section class="content">
             <h2>Архив</h2>
-            <%console.log(data.response)%>
-                <h2></h2>
+            <% if(!!data.response) { data.response.data.filter(el => el.IsArchive === true).forEach((item) => {%>
+                <h2><%- item.Title%></h2>
                 <div class="content__block">
                     <p class="content__block-text">
+                        <%- item.Description %>
                     </p>
+
                     <div class="content__block-card">
-                        <img src="" alt="events.png"/>
+                        <img src="<%= data.domain %><%= item.Image.url %>" alt="events.png"/>
                     </div>
                 </div>
                 <div class="content__line"></div>
+            <%})} else {%>
+                <div>НУ! Найдено</div>
+            <%} %>%>
         </section>
     </div>
 
