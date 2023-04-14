@@ -6,6 +6,8 @@
   font-family: "Inter", sans-serif;
   font-style: normal;
   text-decoration: none;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 body {
@@ -547,21 +549,6 @@ button {
   }
   .inNumbers__circle {
     display: none;
-  }
-  .content__line {
-    width: 100%;
-  }
-  .content__block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .content__block-text {
-    width: 100%;
-  }
-  .content__block-img {
-    width: 100%;
   }
   .flexContainer__block-btn {
     font-size: 13px;
@@ -1604,18 +1591,8 @@ button {
   color: #FFFFFF;
 }
 
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 32px;
-  padding: 50px 0 70px 50px;
-}
 .content h2 {
+  margin-top: 30px;
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;
@@ -1629,14 +1606,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 .content__block-card {
-  width: 50%;
+  width: calc(50% - 15px);
 }
 .content__block-card img {
   border-radius: 20px;
@@ -1645,11 +1624,39 @@ button {
 }
 .content__block-text {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  width: 60%;
+  font-size: 25px;
+  line-height: 30px;
+  width: calc(50% - 15px);
 }
 
+@media (max-width: 1024px) {
+  .content__line {
+    width: 100%;
+  }
+  .content__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content__block-text {
+    width: 100%;
+  }
+  .content__block-card {
+    width: 80%;
+  }
+  .content h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .content__block-card {
+    width: 100%;
+  }
+}
 .calendar {
   padding: 50px 30px;
   display: -webkit-box;
@@ -1762,10 +1769,10 @@ button {
           align-items: center;
 }
 .flexContainer__block-btn {
+  width: 30%;
   background: #4334F1;
   border-radius: 5px;
-  width: 270px;
-  height: 40px;
+  padding: 10px;
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
@@ -1779,6 +1786,81 @@ button {
   color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1024px) {
+  .flexContainer__block-btn {
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .flexContainer__block-btn {
+    padding: 2px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .nav {
+    padding: 0;
+  }
+  .calendar {
+    row-gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  .flexContainer__input::-webkit-input-placeholder {
+    font-size: 20px;
+  }
+  .flexContainer__input::-moz-placeholder {
+    font-size: 20px;
+  }
+  .flexContainer__input:-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .flexContainer__input::-ms-input-placeholder {
+    font-size: 20px;
+  }
+  .flexContainer__input, .flexContainer__input::placeholder {
+    font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .flexContainer__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .flexContainer__input::-moz-placeholder {
+    font-size: 16px;
+  }
+  .flexContainer__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .flexContainer__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .flexContainer__input, .flexContainer__input::placeholder {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .flexContainer__input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .flexContainer__input::-moz-placeholder {
+    font-size: 14px;
+  }
+  .flexContainer__input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .flexContainer__input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .flexContainer__input, .flexContainer__input::placeholder {
+    font-size: 14px;
+  }
+}
 .founder {
   position: relative;
   padding: 80px 0 120px;
@@ -1816,10 +1898,42 @@ button {
 .founder-card {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70.32%, #5c2bdf), to(rgba(241, 23, 146, 0.7)));
   background: linear-gradient(180deg, #5c2bdf 70.32%, rgba(241, 23, 146, 0.7) 100%);
+  position: relative;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
   border-radius: 10px;
   width: 100%;
   padding-bottom: 45px;
   text-align: center;
+}
+.founder-card:hover {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.founder-card:hover .founder-card-info {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70.32%, #5c2bdf), to(rgba(241, 23, 146, 0.7)));
+  background: linear-gradient(180deg, #5c2bdf 70.32%, rgba(241, 23, 146, 0.7) 100%);
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.founder-card:hover .founder-card-text {
+  display: block;
 }
 .founder-card-img {
   width: 100%;
@@ -1836,6 +1950,9 @@ button {
   margin-bottom: 20px;
 }
 .founder-card-text {
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  display: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;

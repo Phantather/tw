@@ -18,7 +18,7 @@
                        minlength="5"
                        maxlength="30"
                 />
-                <button type="button" class="flexContainer__block-btn">Поиск мероприятия</button>
+                <button type="button" class="flexContainer__block-btn">Поиск</button>
             </form>
         </section>
         <section class="calendar">
@@ -44,6 +44,24 @@
             <%})} else {%>
                     <div>НУ! Найдено</div>
                 <%} %>%>
+        </section>
+        <section class="content">
+
+            <% if(!!data.response) { data.response.data.forEach((item) => {%>
+                <h2><%- item.Title%></h2>
+                <div class="content__block">
+                    <p class="content__block-text">
+                        <%- item.Description %>
+                    </p>
+
+                    <div class="content__block-card">
+                        <img src="<%= data.domain %><%= item.Image.url %>" alt="events.png"/>
+                    </div>
+                </div>
+                <div class="content__line"></div>
+            <%})} else {%>
+                <div>НУ! Найдено</div>
+            <%} %>%>
         </section>
     </div>
 
