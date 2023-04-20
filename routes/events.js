@@ -17,7 +17,7 @@ router.get('/events', async (req, res) => {
     console.log(err);
   }
 
-  console.log(!!dateQuery, dateQuery, query);
+
 
   res.render('pages/events/index.ejs', {
     data: {

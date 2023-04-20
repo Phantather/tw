@@ -18,23 +18,26 @@ languageSelect.addEventListener('change', ({ target: { value } }) => {
 });
 //Language switcher end
 
-let formApplication = document.querySelector('#form-application');
+let formApplication = document.querySelectorAll('.contact__form');
 
-formApplication.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const {
-    target: { Fullname, Email, Phone },
-  } = e;
-  let data = {
-    Fullname: Fullname.value,
-    Email: Email.value,
-    Phone: Phone.value,
-  };
-  fetch('http://127.0.0.1:1337/api/leads', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ data }),
-  })
-    .then((response) => alert('Отправлено'))
-    .catch((err) => alert('Что-то пошло не так'));
-});
+
+Array.from(formApplication).forEach((item) => {
+item.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const {
+      target: { Fullname, Email, Phone },
+    } = e;
+    let data = {
+      Fullname: Fullname.value,
+      Email: Email.value,
+      Phone: Phone.value,
+    };
+    fetch('http://127.0.0.1:1337/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ data }),
+    })
+        .then((response) => alert('Отправлено'))
+        .catch((err) => alert('Что-то пошло не так'));
+  });
+})

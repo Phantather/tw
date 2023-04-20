@@ -42,31 +42,43 @@
                 </div>
                 <div class="content__line"></div>
             <%})} else {%>
-                    <div>НУ! Найдено</div>
-                <%} %>%>
-        </section>
-        <section class="content">
-
-            <% if(!!data.response) { data.response.data.forEach((item) => {%>
-                <h2><%- item.Title%></h2>
-                <div class="content__block">
-                    <p class="content__block-text">
-                        <%- item.Description %>
-                    </p>
-
-                    <div class="content__block-card">
-                        <img src="<%= data.domain %><%= item.Image.url %>" alt="events.png"/>
+                    <div class="content__empty">
+                        В этот день не было мероприятий!
+                        <span>
+                            &#128561;
+                        </span>
                     </div>
-                </div>
-                <div class="content__line"></div>
-            <%})} else {%>
-                <div>НУ! Найдено</div>
-            <%} %>%>
+                <%} %>%>
         </section>
     </div>
 
 
 </main>
 <%- include('../../partials/footer') %>
+<script type="text/javascript">
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
 
+    function eventsFilterSearch() {
+        let eventForm = document.querySelector('#events_form');
+        let eventCalendar = document.querySelector('.calendar__input');
+        let eventCurrentDate = document.querySelector('.calendar__today');
+
+        eventForm.addEventListener('submit', () => {
+            new URLSearchParams(new FormData(eventForm)).toString();
+        });
+        eventCalendar.value = getParameterByName('date');
+        eventCalendar.addEventListener('change', () => eventForm.submit());
+    }
+
+
+    eventsFilterSearch();
+
+</script>
 <%- include('../../partials/foot') %>

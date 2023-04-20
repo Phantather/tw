@@ -9,14 +9,6 @@ window.addEventListener('scroll', function () {
 });
 
 
-function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
 
 // Burger
 
@@ -24,7 +16,6 @@ const burger = document.querySelector('.header__burger');
 const headerList = document.querySelector('.header__list');
 
 burger.addEventListener('click', () => {
-    console.log('Click');
     burger.classList.toggle('open');
     headerList.classList.toggle('show');
 });
@@ -136,38 +127,11 @@ var swiper = new Swiper('.foundSwiper', {
     },
 });
 
-function overlayPopupEvent() {
-    let overlay = document.querySelector('.overlay');
-    let btn = document.querySelectorAll('.main__buttons-btn ');
-    let close = document.querySelector('.popup__close');
-    close.addEventListener('click', () => {
-        overlay.style.display = 'none'
-    })
-    overlay.addEventListener('click', (e) => {
-        if (e.target.className === 'overlay') {
-            overlay.style.display = 'none'
-        }
-    })
-    Array.from(btn).forEach((item) => {
-        item.addEventListener('click', () => {
-            overlay.style.display = 'flex';
-        });
-    });
-}
+
 
 
 //Form events filter/search
-function eventsFilterSearch() {
-    let eventForm = document.querySelector('#events_form');
-    let eventCalendar = document.querySelector('.calendar__input');
-    let eventCurrentDate = document.querySelector('.calendar__today');
 
-    eventForm.addEventListener('submit', () => {
-        new URLSearchParams(new FormData(eventForm)).toString();
-    });
-    eventCalendar.value = getParameterByName('date');
-    eventCalendar.addEventListener('change', () => eventForm.submit());
-}
 
 
 let im = new Inputmask("+\\9\\96 (999) 99-99-99");
@@ -179,5 +143,4 @@ im.mask(formTel);
 //Call functions
 
 
-overlayPopupEvent();
-eventsFilterSearch();
+

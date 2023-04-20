@@ -6,6 +6,13 @@
     font-size: 25px;
     color: #e81896;
   }
+  &__empty {
+    text-align: center;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+  }
   &__line{
     border-bottom: 1px solid black;
     width: 60%;
