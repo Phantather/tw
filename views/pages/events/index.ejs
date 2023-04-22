@@ -29,7 +29,7 @@
         </section>
         <section class="content">
 
-            <% if(!!data.response) { data.response.data.forEach((item) => {%>
+            <% if(!!data.response.data.length) { data.response.data.forEach((item) => {%>
                 <h2><%- item.Title%></h2>
                 <div class="content__block">
                     <p class="content__block-text">
