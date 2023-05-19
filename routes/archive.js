@@ -17,9 +17,6 @@ router.get('/archive', async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-
-
-
     res.render('pages/archive/index.ejs', {
         data: {
             response,

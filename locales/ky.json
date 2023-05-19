@@ -1,4 +1,17 @@
 {
-  "Hello": "Салам",
-  "Goodbye": "Кощ"
+  "H_about": "Биз жөнүндө",
+  "H_history": "Тарых",
+  "H_mission": "Миссия жана Маанилер",
+  "H_founders": "Күрөлгөчтөр",
+  "H_project": "Биздин проект",
+  "H_techno": "Technowomen проекттери",
+  "H_support": "IT бизнесин колдоо",
+  "H_collaboration": "Коллаборациялар борбору",
+  "H_events": "Иш-чаралар",
+  "H_forthcoming": "Болуучу иш-чаралар",
+  "H_archive": "Иш-чаралардын архиви",
+  "H_communications": "Биздин баарылашуу",
+  "H_news": "Жаңылыктар",
+  "H_gallery": "Фотогалерея",
+  "H_contacts": "Байланыш"
 }

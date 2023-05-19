@@ -1,4 +1,17 @@
 {
-  "Hello": "Привет",
-  "Goodbye": "Пока"
+  "H_about": "О нас",
+  "H_history": "История",
+  "H_mission": "Миссия и Цели",
+  "H_founders": "Учередители",
+  "H_project": "Наш проект",
+  "H_techno": "Проекты Technowomen",
+  "H_support": "Поддержка IT бизнеса",
+  "H_collaboration": "Центр коллабраций",
+  "H_events": "Мероприятия",
+  "H_forthcoming": "Предстоящие мероприятия",
+  "H_archive": "Архив мероприятий",
+  "H_communications": "Наши комуникации",
+  "H_news": "Наши комуникации",
+  "H_gallery": "Фотогалерея",
+  "H_contacts": "Контакты"
 }
